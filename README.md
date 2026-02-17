@@ -1,23 +1,38 @@
-# Week1 Environment Test
+# DTI Interaction Explorer (Minimal Pipeline)
 
-This project is a minimal FastAPI app and a small notebook used only to verify the local development environment.
+Early-stage scaffold for a Drug Target Interaction (DTI) pipeline. This version is intentionally minimal: it only validates and accepts inputs, with no model inference or scoring.
 
-## What's Here
-- `main.py`: a tiny FastAPI app with two example routes.
-- `dependencies_test.ipynb`: quick dependency check notebook.
-- `Deliverables/`: course documents and research papers.
+## What exists right now
 
-## Quick Start
+- A FastAPI backend with `/health`, `/ingest`, and `/status/{request_id}` endpoints.
+- `/ingest` accepts SMILES + protein sequence and returns a request id.
+- A simple vanilla JS UI to submit inputs and see pipeline status.
+
+## Not included yet
+
+- Model training or RDKit integration.
+- Scoring, plots, metrics, or monitoring.
+- Docker/production deployment.
+- Datasets or training notebooks.
+
+## Run locally
+
+Backend:
+
 ```bash
-python -m venv .venv
+cd backend
+python3.11 -m venv .venv
 source .venv/bin/activate
-pip install fastapi uvicorn
-
-uvicorn main:app --reload
+pip install -r requirements.txt
+uvicorn app.main:app --reload
 ```
 
-Open `http://127.0.0.1:8000` in your browser.
+Frontend:
 
-## Notes
-This repo is intentionally simple and used for environment validation only.
-# DTI
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+The frontend proxies `/api` to `http://localhost:8000`.
