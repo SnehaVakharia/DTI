@@ -1,0 +1,27 @@
+{
+  "timestamp_utc": "2026-02-23T16:34:48.442105+00:00",
+  "data_path": "backend/data/synthetic_dti.csv",
+  "device": "cpu",
+  "dataset_rows": 1200,
+  "train_rows": 839,
+  "val_rows": 120,
+  "test_rows": 241,
+  "seed": 42,
+  "epochs": 10,
+  "batch_size": 64,
+  "learning_rate": 0.001,
+  "best_epoch": 8,
+  "best_val_auroc": 0.5942460317460317,
+  "test_metrics": {
+    "loss": 0.43857903413752797,
+    "auroc": 0.5540762656147271,
+    "auprc": 0.721381234115587,
+    "accuracy": 0.6804979253112033,
+    "f1": 0.7913279132791328
+  },
+  "artifacts": {
+    "model_weights": "Deliverables/models/baseline_cnn_weights.pt",
+    "training_log": "Deliverables/baseline_cnn_run/training_log.csv",
+    "test_predictions": "Deliverables/baseline_cnn_run/test_predictions.csv"
+  }
+}

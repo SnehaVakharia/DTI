@@ -1,0 +1,71 @@
+{
+  "timestamp_utc": "2026-02-23T17:01:05.637651+00:00",
+  "run_id": "20260223T170051Z",
+  "data_path": "backend/data/synthetic_dti.csv",
+  "device": "cpu",
+  "dataset_rows": 600,
+  "train_rows": 419,
+  "val_rows": 60,
+  "test_rows": 121,
+  "class_balance": {
+    "overall_pos_rate": 0.7016666666666667,
+    "train_pos_rate": 0.7016706443914081,
+    "val_pos_rate": 0.7,
+    "test_pos_rate": 0.7024793388429752
+  },
+  "environment": {
+    "python": "3.11.14",
+    "torch": "2.10.0",
+    "numpy": "2.4.2",
+    "pandas": "2.3.3"
+  },
+  "seed": 42,
+  "epochs": 2,
+  "batch_size": 64,
+  "learning_rate": 0.001,
+  "config": {
+    "data_path": "backend/data/synthetic_dti.csv",
+    "output_dir": "Deliverables/baseline_cnn_run",
+    "run_id": null,
+    "model_path": "Deliverables/models/baseline_cnn_weights.pt",
+    "results_csv": "Deliverables/baseline_results.csv",
+    "results_md": "Deliverables/baseline_results.md",
+    "generate_synthetic_data": true,
+    "prepare_davis_data": false,
+    "davis_smiles_path": "data/DAVIS/SMILES.txt",
+    "davis_protein_path": "data/DAVIS/target_seq.txt",
+    "davis_affinity_path": "data/DAVIS/affinity.txt",
+    "davis_threshold_nm": 300.0,
+    "davis_censor_value_nm": 10000.0,
+    "davis_keep_censored": false,
+    "synthetic_samples": 600,
+    "epochs": 2,
+    "batch_size": 64,
+    "learning_rate": 0.001,
+    "max_smiles_len": 120,
+    "max_protein_len": 800,
+    "embed_dim": 64,
+    "conv_channels": 64,
+    "hidden_dim": 128,
+    "dropout": 0.2,
+    "val_size": 0.1,
+    "test_size": 0.2,
+    "seed": 42,
+    "binarize_threshold": null
+  },
+  "best_epoch": 2,
+  "best_val_auroc": 0.5859788359788359,
+  "test_metrics": {
+    "loss": 0.4153568793919461,
+    "auroc": 0.4911764705882353,
+    "auprc": 0.682305693450844,
+    "accuracy": 0.7024793388429752,
+    "f1": 0.8252427184466019
+  },
+  "artifacts": {
+    "model_weights": "Deliverables/baseline_cnn_run/20260223T170051Z/baseline_cnn_weights.pt",
+    "latest_model_weights": "Deliverables/models/baseline_cnn_weights.pt",
+    "training_log": "Deliverables/baseline_cnn_run/20260223T170051Z/training_log.csv",
+    "test_predictions": "Deliverables/baseline_cnn_run/20260223T170051Z/test_predictions.csv"
+  }
+}
