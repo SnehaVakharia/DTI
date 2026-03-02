@@ -92,3 +92,33 @@ Generated deliverables:
 - Per-run model weights: `Deliverables/baseline_cnn_run/<run_id>/baseline_cnn_weights.pt`
 - Per-run logs: `Deliverables/baseline_cnn_run/<run_id>/training_log.csv`
 - Per-run metrics/config snapshot: `Deliverables/baseline_cnn_run/<run_id>/metrics.json`
+<<<<<<< HEAD
+=======
+
+## Week4 Dataset Benchmark + Visualizations
+
+This pipeline benchmarks **DAVIS**, **KIBA**, and **BindingDB_Kd** using the same simple CNN baseline,
+saves clean splits, and exports slide-ready plots.
+
+Run:
+
+```bash
+../.venv-dti/bin/python backend/run_week4_benchmark.py --max-samples 8000 --epochs 3
+```
+
+If you only want to regenerate plots/reports from existing runs:
+
+```bash
+MPLBACKEND=Agg MPLCONFIGDIR=/tmp/mplconfig XDG_CACHE_HOME=/tmp HOME=/tmp \
+../.venv-dti/bin/python backend/generate_week4_visualizations.py
+```
+
+Key outputs:
+
+- Dataset profiles: `Deliverables/week4/reports/dataset_profiles.csv`
+- Baseline comparison table: `Deliverables/week4/reports/baseline_comparison.csv`
+- Summary report: `Deliverables/week4/reports/summary.md`
+- Saved splits: `Deliverables/week4/splits/<dataset>/{train,val,test}.csv`
+- Model weights: `Deliverables/week4/models/*_baseline_cnn_weights.pt`
+- Visualization directory (for PPT): `Deliverables/week4/visualizations/`
+>>>>>>> a3bba6cf (Week 4 backend updates)

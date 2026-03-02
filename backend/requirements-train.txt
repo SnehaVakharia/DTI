@@ -1,5 +1,20 @@
+<<<<<<< HEAD
 -r requirements.txt
 numpy
 pandas
 scikit-learn
 torch
+=======
+numpy==1.26.4
+pandas==2.2.1
+scipy==1.12.0
+scikit-learn==1.4.1.post1
+torch==2.2.1
+torchvision==0.17.1
+torchaudio==2.2.1
+rdkit==2023.9.5
+matplotlib==3.8.3
+seaborn==0.13.2
+tqdm==4.66.2
+PyTDC==1.1.15
+>>>>>>> a3bba6cf (Week 4 backend updates)

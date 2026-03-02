@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 fastapi
 uvicorn[standard]
 pydantic
+=======
+fastapi==0.110.0
+uvicorn==0.27.1
+pydantic==2.6.3
+>>>>>>> a3bba6cf (Week 4 backend updates)

@@ -1,0 +1,71 @@
+{
+  "timestamp_utc": "2026-02-26T13:13:28.362455+00:00",
+  "run_id": "bindingdb_kd_20260226T131021Z",
+  "data_path": "/Users/sneha/Downloads/Final Year/Week4/Deliverables/week4/processed/bindingdb_kd_binary.csv",
+  "device": "cpu",
+  "dataset_rows": 8000,
+  "train_rows": 5599,
+  "val_rows": 800,
+  "test_rows": 1601,
+  "class_balance": {
+    "overall_pos_rate": 0.152875,
+    "train_pos_rate": 0.1528844436506519,
+    "val_pos_rate": 0.1525,
+    "test_pos_rate": 0.15302935665209244
+  },
+  "environment": {
+    "python": "3.11.14",
+    "torch": "2.10.0",
+    "numpy": "1.26.4",
+    "pandas": "2.3.3"
+  },
+  "seed": 42,
+  "epochs": 3,
+  "batch_size": 128,
+  "learning_rate": 0.001,
+  "config": {
+    "data_path": "/Users/sneha/Downloads/Final Year/Week4/Deliverables/week4/processed/bindingdb_kd_binary.csv",
+    "output_dir": "/Users/sneha/Downloads/Final Year/Week4/Deliverables/week4/runs",
+    "run_id": "bindingdb_kd_20260226T131021Z",
+    "model_path": "/Users/sneha/Downloads/Final Year/Week4/Deliverables/week4/models/bindingdb_kd_baseline_cnn_weights.pt",
+    "results_csv": "/Users/sneha/Downloads/Final Year/Week4/Deliverables/week4/reports/baseline_results.csv",
+    "results_md": "/Users/sneha/Downloads/Final Year/Week4/Deliverables/week4/reports/baseline_results.md",
+    "generate_synthetic_data": false,
+    "prepare_davis_data": false,
+    "davis_smiles_path": "data/DAVIS/SMILES.txt",
+    "davis_protein_path": "data/DAVIS/target_seq.txt",
+    "davis_affinity_path": "data/DAVIS/affinity.txt",
+    "davis_threshold_nm": 300.0,
+    "davis_censor_value_nm": 10000.0,
+    "davis_keep_censored": false,
+    "synthetic_samples": 1200,
+    "epochs": 3,
+    "batch_size": 128,
+    "learning_rate": 0.001,
+    "max_smiles_len": 120,
+    "max_protein_len": 800,
+    "embed_dim": 64,
+    "conv_channels": 64,
+    "hidden_dim": 128,
+    "dropout": 0.2,
+    "val_size": 0.1,
+    "test_size": 0.2,
+    "seed": 42,
+    "binarize_threshold": null
+  },
+  "best_epoch": 3,
+  "best_val_auroc": 0.8444315489143576,
+  "test_metrics": {
+    "loss": 0.8732346069209654,
+    "auroc": 0.8359340196255491,
+    "auprc": 0.49741834322289763,
+    "accuracy": 0.7339163023110555,
+    "f1": 0.48175182481751827
+  },
+  "artifacts": {
+    "model_weights": "/Users/sneha/Downloads/Final Year/Week4/Deliverables/week4/runs/bindingdb_kd_20260226T131021Z/baseline_cnn_weights.pt",
+    "latest_model_weights": "/Users/sneha/Downloads/Final Year/Week4/Deliverables/week4/models/bindingdb_kd_baseline_cnn_weights.pt",
+    "training_log": "/Users/sneha/Downloads/Final Year/Week4/Deliverables/week4/runs/bindingdb_kd_20260226T131021Z/training_log.csv",
+    "test_predictions": "/Users/sneha/Downloads/Final Year/Week4/Deliverables/week4/runs/bindingdb_kd_20260226T131021Z/test_predictions.csv"
+  }
+}

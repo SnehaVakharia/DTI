@@ -1,0 +1,6 @@
+method,performance_score,convergence_score
+SMILES CNN,3.8,3.2
+Morgan Fingerprint,3.6,3.5
+Graph-based Ligand,4.7,4.1
+Protein Raw Sequence,3.9,3.0
+Protein Embedding,4.2,4.8
